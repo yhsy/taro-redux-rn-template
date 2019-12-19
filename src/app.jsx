@@ -4,7 +4,10 @@ import { Provider } from '@tarojs/redux'
 
 // 首页模板
 // import Index from './pages/index';
-import Index from './pages/dva'
+// dvajs实例
+// import Index from './pages/dva';
+import Index from './pages/home'
+
 
 
 /* Redux状态管理-start */
@@ -43,7 +46,11 @@ class App extends Component {
   config = {
     pages: [
       // 'pages/index/index',
-      'pages/dva/index'
+      // 'pages/dva/index',
+      // 首页
+      'pages/home/index',
+      // 登录页
+      'pages/login/index'
     ],
     window: {
       backgroundTextStyle: 'light',

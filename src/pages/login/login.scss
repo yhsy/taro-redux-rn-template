@@ -1,0 +1,35 @@
+.m_login{
+    margin-top: 50px;
+    padding: 20px;
+  }
+  .ipt_item{
+    margin: 10px 0;
+    flex-direction: row;
+  }
+  .ipt_label{
+    line-height: 60px;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+  .ipt_text{
+    flex: 1;
+    padding: 0 20px;
+    // line-height: 60px;
+    border-width: 2px;
+    border-color: #f00;
+    border-style: solid;
+  }
+  .btn_login{
+    margin-top: 20px;
+    flex: 1;
+    background-color: orange;
+  }
+  .user_info{
+    margin-top: 30px;
+  }
+  .text-red{
+    font-size: 32px;
+    color: #f00;
+    line-height: 60px;
+    text-align: center;
+  }
