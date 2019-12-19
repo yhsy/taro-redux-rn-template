@@ -1,0 +1,28 @@
+.index {
+    flex-direction: column;
+    width: 100%;
+  }
+  .add_btn {
+    background-color: #f00;
+  }
+  .add_btn_text {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .dec_btn{
+    background-color: blue;
+  }
+  .asc_btn{
+    background-color: green;
+  }
+  .num{
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .num_text{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+ 

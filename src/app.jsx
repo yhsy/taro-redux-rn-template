@@ -2,9 +2,33 @@ import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
-import Index from './pages/index'
+// 首页模板
+// import Index from './pages/index';
+import Index from './pages/dva'
 
-import configStore from './store'
+
+/* Redux状态管理-start */
+  // Redux默认配置
+  // import configStore from './store'
+
+  // Redux入口文件
+  // const store = configStore()
+/* Redux状态管理-end */
+
+/* Dva状态管理-start */
+// Dva配置
+import dva from './store/dva'
+import models from './models'
+
+const dvaApp = dva.createApp({
+  initialState: {},
+  models: models,
+  // onError(e, dispatch) {
+  //   dispatch(action("sys/error", e));
+  // },
+});
+const store = dvaApp.getStore();
+/* Dva状态管理-end */
 
 import './app.scss'
 
@@ -14,13 +38,12 @@ import './app.scss'
 //   require('nerv-devtools')
 // }
 
-const store = configStore()
-
 class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      // 'pages/index/index',
+      'pages/dva/index'
     ],
     window: {
       backgroundTextStyle: 'light',
