@@ -123,6 +123,12 @@ const config = {
         }
       }
     }
+  },
+  rn: {
+    appJson: {
+      // NOTE taro-native-shell 中默认用的是 taroDemo
+      name: 'taroDemo'
+    }
   }
 }
 
