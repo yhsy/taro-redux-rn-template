@@ -1,27 +1,15 @@
+// 基础依赖
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
 // 首页模板
-// import Index from './pages/index';
-// dvajs实例
-// import Index from './pages/dva';
-import Index from './pages/home'
-
-
-
-/* Redux状态管理-start */
-  // Redux默认配置
-  // import configStore from './store'
-
-  // Redux入口文件
-  // const store = configStore()
-/* Redux状态管理-end */
+import Index from '@pages/home'
 
 /* Dva状态管理-start */
 // Dva配置
-import dva from './store/dva'
-import models from './models'
+import dva from '@store/dva'
+import models from '@models/index'
 
 const dvaApp = dva.createApp({
   initialState: {},
@@ -44,19 +32,60 @@ import './app.scss'
 class App extends Component {
 
   config = {
+    // 页面路由
     pages: [
       // 'pages/index/index',
       // 'pages/dva/index',
       // 首页
       'pages/home/index',
       // 登录页
-      'pages/login/index'
+      'pages/login/index',
+      // 分类
+      'pages/cate/index',
+      // 购物车
+      'pages/cart/index',
+      // 我的
+      'pages/user/index'
     ],
+    // 用于设置状态栏、导航条、标题、窗口背景色
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '西瓜购',
       navigationBarTextStyle: 'black'
+    },
+    // 全局tabBar配置
+    tabBar: {
+      color: "#666",
+      selectedColor: "#b4282d",
+      backgroundColor: "#fafafa",
+      borderStyle: 'black',
+      list: [
+        {
+          pagePath: "pages/home/index",
+          iconPath: "./assets/tab-bar/home.png",
+          selectedIconPath: "./assets/tab-bar/home-active.png",
+          text: "首页"
+        }, 
+        {
+          pagePath: "pages/cate/index",
+          iconPath: "./assets/tab-bar/cate.png",
+          selectedIconPath: "./assets/tab-bar/cate-active.png",
+          text: "分类"
+        },
+        {
+          pagePath: "pages/cart/index",
+          iconPath: "./assets/tab-bar/cart.png",
+          selectedIconPath: "./assets/tab-bar/cart-active.png",
+          text: "购物车"
+        },
+        {
+          pagePath: "pages/user/index",
+          iconPath: "./assets/tab-bar/user.png",
+          selectedIconPath: "./assets/tab-bar/user-active.png",
+          text: "我的"
+        }
+      ]      
     }
   }
 

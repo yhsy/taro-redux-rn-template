@@ -1,0 +1,13 @@
+@import '@styles/reset.scss';
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.u_red{
+    font-size: 60px;
+    color: #f00;
+    font-weight: bold;
+    line-height: 80px;
+}
